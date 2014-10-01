@@ -12,18 +12,8 @@ mkdir -p /usr/local/texlive
 chmod -R 777 /usr/local/texlive/
 sudo -i -u sailor /docker-build/support/user_sailor.sh
 
-export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
-
-# Build and install: LaTeXML
-cpan Archive::Zip DB_File File::Which Image::Size IO::String JSON::XS LWP Parse::RecDescent URI XML::LibXML XML::LibXSLT UUID::Tiny
-cd /docker-build/support
-git clone https://github.com/brucemiller/LaTeXML.git
-cd LaTeXML
-git checkout v0.8.0
-perl Makefile.PL
-make
-make test
-make install
+# Build, install: LaTeXML
+/docker-build/support/build_latexml.sh
 
 # Cleanup
 rm -rf $HOME/.cpan/build/* $HOME/.cpan/sources/authors/id $HOME/.cpan/cpan_sqlite_log.* /tmp/cpan_install_*.txt
