@@ -1,13 +1,13 @@
 # Docker version 1.1.2, build d84a070
-FROM nccts/baseimage:0.0.8
+FROM nccts/baseimage:0.0.9
 
 # nccts/latex
-# Version: 0.0.8
+# Version: 0.0.9
 MAINTAINER "Michael Bradley" <michael.bradley@nccts.org>
 # Ave, Regina Caelorum, ave, Domina Angelorum: salve, radix, salve, porta!
 
 # Cache buster
-ENV REFRESHED_AT [2014-09-09 Tue 14:09]
+ENV REFRESHED_AT [2014-09-30 Tue 10:08]
 
 # Set environment variables
 ENV HOME /root
