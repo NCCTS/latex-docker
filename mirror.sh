@@ -3,8 +3,8 @@
 script=$(readlink -f $0)
 script_path=$(dirname "$script")
 
-cd $script_path/support
-mkdir texlive-mirror
+cd $script_path
+mkdir -p texlive-mirror
 cd texlive-mirror
 # Can substitute with preferred CTAN mirror - ftp://
 wget --mirror --no-parent ftp://bay.uchicago.edu/tex-archive/systems/texlive/tlnet/ ./
