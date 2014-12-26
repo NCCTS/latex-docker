@@ -16,7 +16,8 @@ ENV HOME /root
 ADD . /docker-build
 
 # Run main setup script, cleanup supporting files
-RUN chmod -R 777 /docker-build && /docker-build/setup.sh && rm -rf /docker-build
+RUN chmod -R 777 /docker-build
+RUN /docker-build/setup.sh && rm -rf /docker-build
 
 # Use phusion/baseimage's init system as the entrypoint:
 # 'entry.sh' starts tmux as the 'sailor' user with a session named 'latex'
