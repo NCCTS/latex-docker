@@ -39,7 +39,7 @@ mirr_name=mirr-$(quad_rand)
 docker run \
        -d \
        --name $mirr_name \
-       nccts/texlive-mirror:2014
+       nccts/texlive-mirror
 
 builder_name=builder-$(quad_rand)
 docker run \
