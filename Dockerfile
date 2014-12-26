@@ -13,24 +13,6 @@ ENV REFRESHED_AT [2014-12-25 Tue 03:53]
 ENV HOME /root
 
 # Add supporting files for the build
-# ----------------------------------
-# SHOULD REVISE setup.sh and augment mirror.sh so that the local texlive-mirror
-# can be accessed via a local static web server; then via .dockerignore the
-# texlive-mirror can be excluded from the build context, which should help cut
-# down on the final image size
-
-# `python -m SimpleHTTPServer [port]` is probably a good thing to rely on in
-# augmented mirror.sh, but should detect python3 and use `python -m http.server
-# [port]` instead; that would leave choosing a port which might conflict with
-# something already running, but can pick something like 12345 and in README.md
-# give clear instructions on what to change in setup. sh,user_sailor.sh if a
-# different port is used; will need to think about how the docker build can
-# "talk to" the static web server running on the docker host and document that
-# carefully as well; also need to figure out if that kind of local static HTTP
-# server will work satisfactorily with the '-repository' flag for the texlive
-# install script, i.e. maybe it needs to be FTP instead, or maybe the directory
-# listing my the python server won't match up with what the install script
-# expects of an HTTP repo-mirror of CTAN
 ADD . /docker-build
 
 # Run main setup script, cleanup supporting files
