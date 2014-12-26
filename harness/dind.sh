@@ -20,4 +20,4 @@ cd temp
 git clone ../latex-docker
 cd latex-docker
 echo $mirr_http > support/repository.txt
-docker build -t nccts/latex:0.0.10 .
+docker build -t nccts/latex:$(cat support/build_tag.txt) .
