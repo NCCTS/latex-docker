@@ -20,4 +20,6 @@ cd temp
 cp -R ../latex-docker ./
 cd latex-docker
 echo $mirr_http > support/repository.txt
-docker build -t nccts/latex:$(cat support/build_tag.txt) .
+build_tag=$(cat support/build_tag.txt)
+echo -e "\nBuilding nccts/latex:$build_tag\n"
+docker build -t nccts/latex:$build_tag .
