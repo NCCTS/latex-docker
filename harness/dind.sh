@@ -17,7 +17,7 @@ done
 cd /home/sailor
 mkdir temp
 cd temp
-git clone ../latex-docker
+cp -R ../latex-docker ./
 cd latex-docker
 echo $mirr_http > support/repository.txt
 docker build -t nccts/latex:$(cat support/build_tag.txt) .
