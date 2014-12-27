@@ -1,1 +1,1 @@
-ftp://bay.uchicago.edu/tex-archive/systems/texlive/tlnet/
+http://some:port/texlive/mirror
