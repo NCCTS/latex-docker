@@ -43,7 +43,6 @@ docker run \
 
 builder_name=builder-$(quad_rand)
 docker run \
-       --privileged \
        -it --rm \
        --name $builder_name \
        --link $mirr_name:mirr \
