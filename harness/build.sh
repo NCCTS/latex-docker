@@ -50,9 +50,8 @@ docker run \
        --name $builder_name \
        -v /var/run:/var/docker_host/run \
        --volumes-from $data_name \
-       --entrypoint /sbin/my_init \
        nccts/builder \
-       -- bash -i -c /home/sailor/latex-docker/harness/dind.sh
+       /home/sailor/latex-docker/harness/dind.sh
 
 docker kill $mirr_name
 docker rm $mirr_name
