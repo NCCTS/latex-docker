@@ -39,7 +39,8 @@ mirr_name=mirr-$(quad_rand)
 docker run \
        -d \
        --name $mirr_name \
-       nccts/texlive-mirror
+       nccts/texlive-mirror \
+       'while true; do sleep 86400; done'
 
 builder_name=builder-$(quad_rand)
 docker run \
