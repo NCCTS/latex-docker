@@ -46,6 +46,7 @@ builder_name=builder-$(quad_rand)
 docker run \
        -it --rm \
        --name $builder_name \
+       --env ENV_WHITE='*ALL*' \
        --link $mirr_name:mirr \
        -v /var/run:/var/docker_host/run \
        --volumes-from $data_name \
