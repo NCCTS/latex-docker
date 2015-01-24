@@ -2,7 +2,7 @@
 
 cd /docker-build/support
 repo=$(cat repository.txt)
-wget $repo/install-tl-unx.tar.gz
+wget -nv $repo/install-tl-unx.tar.gz
 tar xvzf install-tl-unx.tar.gz
 cd $(dirname -- $(ls install-tl-*/install-tl))
 
