@@ -2,12 +2,12 @@
 FROM nccts/baseimage:0.0.11
 
 # nccts/latex
-# Version: 0.0.10
+# Version: 0.0.11
 MAINTAINER "Michael Bradley" <michael.bradley@nccts.org>
 # Ave, Regina Caelorum, ave, Domina Angelorum: salve, radix, salve, porta!
 
 # Cache buster
-ENV REFRESHED_AT [2014-12-25 Tue 03:53]
+ENV REFRESHED_AT [2015-01-23 Fri 16:41]
 
 # Set environment variables
 ENV HOME /root
